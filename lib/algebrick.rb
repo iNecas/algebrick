@@ -278,7 +278,8 @@ module Algebrick
     end
 
     def from_hash(hash)
-      if hash == to_hash
+      # TODO: make sure it works with new algebrick version
+      if hash[TYPE_KEY] == to_hash[TYPE_KEY]
         self
       else
         raise ArgumentError
